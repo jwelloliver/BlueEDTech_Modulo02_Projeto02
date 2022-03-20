@@ -47,3 +47,22 @@ header {
     background-color: rgb(68, 105, 255);
     padding: 6rem 3rem 3rem 3rem;
   }
+  footer {
+    padding: 3rem;
+    text-align: center;
+  }
+  
+  footer p {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  footer p a {
+    text-decoration: none;
+    color: #3359ec;
+    transition: 0.5s;
+  }
+  
+  footer p a:hover {
+    color: rgb(255, 68, 230);
+  }
