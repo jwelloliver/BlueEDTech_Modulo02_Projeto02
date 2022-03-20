@@ -12,7 +12,15 @@ app.get("/", (req, res) => {
 });
 
 app.get("/index", (req, res) => {
-    res.render("index");
-  });
+  res.render("index");
+});
+
+app.get("/cadastro", (req, res) => {
+  res.render("cadastro");
+});
+
+app.get("/detalhes", (req, res) => {
+  res.render("detalhes");
+});
 
 app.listen(port, () => console.log(`Servidor rodando em http://localhost:${port}`));
