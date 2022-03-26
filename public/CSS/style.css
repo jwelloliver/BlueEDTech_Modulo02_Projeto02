@@ -69,7 +69,7 @@ header {
   }
    
   .card p {
-    color: #a3a5ae;
+    color: #fdfdff;
     font-size: 16px;
   }
    
@@ -82,12 +82,19 @@ header {
     border-left: 3px solid rgb(68, 105, 255);;
   }
    
-  .green {
+  .cadastro {
+    align-items: center;
+    width: 400px;
     border-left: 3px solid rgb(68, 105, 255);;
   }
-   
-  .red {
-    border-left: 3px solid rgb(68, 105, 255);
+  input {
+    margin: 0; /* Retira as margens */
+    border: none; /* Retira todas as bordas */
+    border-radius: 0; /* Retira todo arredondamento padrão das bordas */
+    width: 75%; /* Faz ele ocupar 75% da largura do article */
+    padding: 0.6rem; /* Espaçamento interno */
+    font-size: 1rem; /* Tamanho da fonte dentro do input */
+    outline: none; /* Tira toda borda quando ele for focado */
   }
   footer {
     padding: 3rem;
