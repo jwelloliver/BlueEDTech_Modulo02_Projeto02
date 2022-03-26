@@ -47,6 +47,48 @@ header {
     background-color: rgb(68, 105, 255);
     padding: 6rem 3rem 3rem 3rem;
   }
+
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    text-align: center;
+    color: rgb(68, 105, 255);
+    border-radius: 5px;
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+    padding: 30px;
+    margin: 20px;
+    width: 150px;
+    transition: all 0.3s ease-out;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+  }
+   
+  .card p {
+    color: #a3a5ae;
+    font-size: 16px;
+  }
+   
+  .image {
+    float: center;
+    max-width: 150px;
+    max-height: 150px;
+  }
+  .blue {
+    border-left: 3px solid rgb(68, 105, 255);;
+  }
+   
+  .green {
+    border-left: 3px solid rgb(68, 105, 255);;
+  }
+   
+  .red {
+    border-left: 3px solid rgb(68, 105, 255);
+  }
   footer {
     padding: 3rem;
     text-align: center;
