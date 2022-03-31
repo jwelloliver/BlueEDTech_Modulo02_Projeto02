@@ -25,18 +25,41 @@
     <header>
     </header>
     <div class="row">
+        <% if (pokemon == undefined) { %>
         <div class="card cadastro">
         <h2>Cadastro Pokemon</h2>
         <p>Realize o seu cadastro do Pokemon Favorito !! </p>
-            <lu><img class="image" src="/img/pokebola.png" alt="pokebola" /></lu>
-            <lu><input type="nome" id="myInput" placeholder="Nome do Pokemon"></lu>
-            <lu><input type="nome" id="myInput" placeholder="Tipo"></lu>
-            <lu><input type="nome" id="myInput" placeholder="URL da imagen"></lu>
-            <lu><input type="nome" id="myInput" placeholder="Descrição"></lu>
-            <lu><input type="nome" id="myInput" placeholder="Altura"></lu>
-            <lu><input type="nome" id="myInput" placeholder="Peso"></lu>
-            <lu><input type="nome" id="myInput" placeholder="Categoria"></lu>
-            <lu><input type="nome" id="myInput" placeholder="Habilidade"></lu>
+        <form action="/add" method="post">
+            <img class="image" src="/img/pokebola.png" alt="pokebola" />
+            <input type="texto" id="numero" name="numero" placeholder="Id">
+            <input type="texto" id="nome" name="nome" placeholder="Nome do Pokemon">
+            <input type="texto" id="tipo" name="tipo" placeholder="Tipo">
+            <input type="texto" id="imagem" name="imagem" placeholder="URL da imagen">
+            <input type="texto" id="descricao" name="descricao" placeholder="Descrição">
+            <input type="texto" id="altura" name="altura" placeholder="Altura">
+            <input type="texto" id="peso" name="peso" placeholder="Peso">
+            <input type="texto" id="myInput" placeholder="Categoria">
+            <input type="texto" id="myInput" placeholder="Habilidade">
+
+            <button id="btnCadastrar" type="submit">Cadastrar</button>
+        </form>
+        <% } else { %>
+            <h2>Atualize seu Pokemon!</h2>
+            <form action="/update/<%= pokemon.id %>" method="post">
+                <img class="image" src="/img/pokebola.png" alt="pokebola" />
+                <input type="texto" id="numero" name="numero" placeholder="Id">
+                <input type="texto" id="nome" name="nome" placeholder="Nome do Pokemon">
+                <input type="texto" id="tipo" name="tipo" placeholder="Tipo">
+                <input type="texto" id="imagem" name="imagem" placeholder="URL da imagen">
+                <input type="texto" id="descricao" name="descricao" placeholder="Descrição">
+                <input type="texto" id="altura" name="altura" placeholder="Altura">
+                <input type="texto" id="peso" name="peso" placeholder="Peso">
+                <input type="texto" id="myInput" placeholder="Categoria">
+                <input type="texto" id="myInput" placeholder="Habilidade">
+
+            <button id="btnAtualizar" type="submit">Atualizar</button>
+            </form>
+        <% } %>
       </div>
     </div>
     <footer>
