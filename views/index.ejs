@@ -26,25 +26,28 @@
     <header>
         <img>
     </header>
-    <div class="row">
-        <div class="card blue">
-          <h2>Bulbasaur</h2>
-          <p></p>
-          <img class="image" src="/img/001.png" alt="pokemon Bulbasaur" />
-        </div>
-   
-        <div class="card blue">
-          <h2>Ivysaur</h2>
-          <p></p>
-          <img class="image" src="/img/002.png" alt="pokemon Ivysaur" />
-        </div>
-   
-        <div class="card blue">
-          <h2>Venusaur</h2>
-          <p></p>
-          <img class="image" src="/img/003.png" alt="pokemon Venusaur" />
-        </div>
-      </div>
+    <main>
+
+        <section id="cards">
+
+            <% pokedex.forEach((pokemon) => { %>
+                <div class="row">
+                    <div class="pokemon">
+                        <div class="card blue">
+                            <h2 class="name"><%= pokemon.nome %></h2>
+                            <span class="tipo"> Tipo: <%= pokemon.tipo %></span>                                
+                            <img src="<%= pokemon.imagem %>" alt="" class="image">
+                        </div>
+                    </div>
+                </div>
+
+            <% }); %>
+            
+
+        </section>
+
+    </main>
+
     <footer>
         <p>
             <a href="" target="_blank"> Pokedex JWO - Todos os Direitos Reservados 2022</a>
